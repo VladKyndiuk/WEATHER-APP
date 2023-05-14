@@ -1,0 +1,49 @@
+.custom_select{
+    &__control{
+        background-color: transparent !important;
+        border: none !important;
+        border-bottom: 1px white solid !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        height: 45px;
+        
+        
+    }
+    &__indicator{
+        color: #fff !important;     
+    }
+    &__placeholder{
+        color: #fff !important;
+
+    }
+    &__input{
+        color: #fff !important;
+
+    }
+    &__indicator-separator{
+        display: none !important;
+
+    }
+    &__single-value{
+        color: #fff !important;
+    }
+
+
+    &--menu-is-open{
+        border: none !important;
+        
+    }
+    &__menu{
+
+        animation: opacityAnimation 0.2s ease-in-out;
+    }
+}
+
+@keyframes opacityAnimation{
+    0%{
+      opacity: 0%;
+    }
+    100%{
+      opacity: 100%;
+    }
+  }

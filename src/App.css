@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%);  
+  background-repeat: no-repeat;  
+  background-attachment: fixed;
+  height: 100%;
+
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100vh;
+  /* height: 500px; */
+
+
+  /* width: 95%; */
+
+  
+  width: 95%;
+
+  height: auto;
+  max-width: 1600px;
+  max-width: 1200px;
+
+  
+
+  /* padding: 0 15px; */
+  margin: 0 auto;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.cityName{
+  font-size: 40px;
+  color: white;
+  margin-top: 20px;
+}
+
+.columns{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.column{
+  width: 50%;
+  /* height: 100%; */
+  text-align: center;
+  color: white;
+  font-size: 80px;
+
+}
+.column.left{
+  display: flex;
+  flex-direction: row;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.search{
+  padding-top: 10px;
+  animation: opacityAnimation 0.5s ease-in-out;
+}
+.column:first-child{
+  border-right: 2px solid white;
+}
+.icon-big{
+  display: flex;
+  margin: auto; 
+  width: 50%;
+  justify-content: center;
+}
+.imageBig{
+  width: 200px;
+  height: 200px;
+}
+
+.cls-1{
+  fill: #fff;
+}
+.condition{
+  font-size: 37px;
+}
+
+/* LEFT COLUMN */
+.cell-value{
+  font-size: 22px;
+}
+.cell-name{
+  font-size: 20px;
+  opacity: 0.75;
+}
+
+
+.column.right{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 33.33333333333333%;
+}
+.center{
+  color: #fff;
+  font-size: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  animation: opacityAnimation 0.5s ease-in-out;
+  /* flex: 1 1 auto; */
+}
+.text{
+  margin-top: 150px;
+  font-size: 25px;
+  color: #fff;
+
+}
+/* CELLS */
+
+.todaysWeather{
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+.todaysWeatherCell{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 185px;
+  width: 150px;
+  
+  background-color: #1c45a1;
+  border-radius: 26px;
+}
+
+.time{
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+.todaysWeatherCellInner{
+  width: 100%;
+  display: flex;
+  opacity: 90%;
+  flex-direction: column;
+  align-items: center;
+}
+.temperatureInCell{
+  color: #fff;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.dateNow{
+  color: #fff;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+
+/* ANIMATION */
+
+@keyframes opacityAnimation{
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+.allInformation{
+  /* margin-top: 20px; */
+  animation: opacityAnimation 0.5s ease-in-out;
+}
+
+/* MEDIA QUERIES */
+
+/* 900px WIDTH */
+
+@media (max-width: 900px) {
+  .columns{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+  }
+  .column{
+    width: 100%;
+  }
+  .column.left{
+    border-right: none;
+  }
+  .column.right{
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+  }
+  .cell{
+    height: 100px;
+  }
+  .text{
+    margin-top: 15px;
+  }
+  .cityName{
+    margin-top: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .temperature{
+    font-size: 65px;
+  }
+  .column.left{
+    margin-bottom: 10px;
+  }
+  .imageBig{
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+
+@media (max-width: 630px) {
+  .todaysWeather{
+    flex-wrap: wrap;
+  }
+  .todaysWeatherCell{
+    width: 30%;
+  }
+}
+
